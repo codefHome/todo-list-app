@@ -9,9 +9,8 @@ const connection= async()=>{
         const user=process.env.USER
         const password=process.env.PASSWORD
         const db=process.env.DB
-        const dbUrl=(`mongodb+srv://${user}:${password}@cluster0.vtxuq1s.mongodb.net/${db}?retryWrites=true&w=majority`)
-        // const dbUrl=`mongodb://mongodb:27017/todo`
-        // mongodb+srv://bedada6:<password>@cluster0.vtxuq1s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+     
+        const dbUrl=`mongodb://mongodb:27017/todo`
         await mongoose.connect(dbUrl,settings).then(()=>{
             console.log("Connected to the DB")
         }).catch((e)=>{
