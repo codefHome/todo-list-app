@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   express-app:
     build: .
@@ -7,7 +7,7 @@ services:
     depends_on:
       - mongodb
     environment:
-      - MONGO_URL=mongodb://mongodb:27017/ExpressTest
+      - MONGO_URL=mongodb://mongodb:27017/todo
     links:
       - mongodb
 
@@ -18,7 +18,7 @@ services:
     volumes:
       - mongo-data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=ExpressTest
+      - MONGO_INITDB_DATABASE=todo
 
 volumes:
   mongo-data:
